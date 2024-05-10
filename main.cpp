@@ -12,19 +12,19 @@ int main() {
     std::cout << "Enter the size of your array" << std::endl;
     std::cin >> size;
 
-    int* arr = new int[size];
+    Array obj(size);
+ 
+    obj.addElement(4);
+    obj.addElement(3);
+    obj.addElement(4);
+    obj.addElement(1);  
+    obj.addElement(5);
 
-    std::cout << "fill the array" << std::endl;
-
-    for (int i = 0; i < size; ++i) {
-        std::cin >> arr[i];
-    }
-
-    Array obj(size, arr);
-    
-    std::cout << std::endl;
     std::cout << obj[2] << std::endl;
 
-    std::cout << std::endl;
-    std::cout << obj << std::endl; 
+    obj.deleteElement(0);
+    obj.printArray();
+
+
+    return 0;
 }
